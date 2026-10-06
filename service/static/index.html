@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Demo REST API Service</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 760px; }
+    label { display: inline-block; width: 110px; margin: .3rem 0; }
+    input, select { width: 260px; padding: 4px; }
+    button { margin: .6rem .3rem 0 0; padding: 6px 12px; }
+    #flash_message { margin: 1rem 0; min-height: 1.4rem; font-weight: bold; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Product Catalog Administration</h1>
+
+  <div>
+    <div><label for="product_id">Id</label><input type="text" id="product_id"></div>
+    <div><label for="product_name">Name</label><input type="text" id="product_name"></div>
+    <div><label for="product_description">Description</label><input type="text" id="product_description"></div>
+    <div><label for="product_available">Available</label>
+      <select id="product_available">
+        <option value="">Any</option>
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+    </div>
+    <div><label for="product_category">Category</label>
+      <select id="product_category">
+        <option value="">Any</option>
+        <option value="UNKNOWN">Unknown</option>
+        <option value="CLOTHS">Cloths</option>
+        <option value="FOOD">Food</option>
+        <option value="HOUSEWARES">Housewares</option>
+        <option value="AUTOMOTIVE">Automotive</option>
+        <option value="TOOLS">Tools</option>
+      </select>
+    </div>
+    <div><label for="product_price">Price</label><input type="text" id="product_price"></div>
+  </div>
+
+  <div>
+    <button type="button" id="search-btn">Search</button>
+    <button type="button" id="clear-btn">Clear</button>
+    <button type="button" id="retrieve-btn">Retrieve</button>
+    <button type="button" id="create-btn">Create</button>
+    <button type="button" id="update-btn">Update</button>
+    <button type="button" id="delete-btn">Delete</button>
+  </div>
+
+  <div id="flash_message"></div>
+  <div id="search_results"></div>
+
+  <script src="/static/js/rest_api.js"></script>
+</body>
+</html>
